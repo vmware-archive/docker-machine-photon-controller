@@ -8,12 +8,10 @@ keywords = ["machine, Photon Controller, driver"]
 
 # Photon Controller Driver Plugin
 
-## Create machines on [Photon Controller](http://vmware.github.io/photon-controller/).
+Photon Controller driver plugin is developed to create machines on [Photon Controller](http://vmware.github.io/photon-controller/). In order to create a docker machine you must supply parameters 
+using the following command line / environment variable options.
 
-To create machines on [Photon Controller](http://vmware.github.io/photon-controller/), you must supply parameters using the following command line / environment variable options
-for the photon controller driver plugin.
-
-### Options
+## Options
 
 -   `--photon-endpoint`: Your Photon Controller deployment endpoint. It includes both IP and protocol like: https://192.0.2.2
 -   `--photon-project`: Your project Id already defined in the Photon Controller.
@@ -41,7 +39,7 @@ Environment variables and default values:
 | `--photon-ssh-user-password`             | `PHOTON_SSH_USER_PASSWORD` | -                |
 | `--photon-ssh-user`                      | `PHOTON_SSH_USER`          | `docker`         |
 
-### Configuring setup data in Photon Controller
+## Configuring setup data in Photon Controller
 
 Before using the photoncontroller driver, ensure that you've configured the following setup data in Photon Controller.
 Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-controller-cli) to connect to and configure data in Photon Controller:
@@ -128,5 +126,4 @@ PHOTON_PROJECT = 71a4dd83-763e-4d7e-91fe-8b7e1f6a0719
 PHOTON_DISK_FLAVOR = DockerDiskFlavor
 PHOTON_IMAGE = 7b36947c-5387-404c-8123-2d71fd6baea7
 PHOTON_VM_FLAVOR = DockerFlavor
-PHOTON_SSH_KEYPATH = /data/id_rsa
 PHOTON_ISO_PATH = /data/cloud-init.iso
