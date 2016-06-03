@@ -6,13 +6,14 @@ keywords = ["machine, Photon Controller, driver"]
 +++
 <![end-metadata]-->
 
-# Photon Controller
+# Photon Controller Driver Plugin
 
-Create machines using [Photon Controller](http://vmware.github.io/photon-controller/).
+## Create machines on [Photon Controller](http://vmware.github.io/photon-controller/).
 
-To create machines using [Photon Controller](http://vmware.github.io/photon-controller/), you must supply parameters using the following command line / environment variable options.
+To create machines on [Photon Controller](http://vmware.github.io/photon-controller/), you must supply parameters using the following command line / environment variable options
+for the photon controller driver plugin.
 
-## Options
+### Options
 
 -   `--photon-endpoint`: Your Photon Controller deployment endpoint. It includes both IP and protocol like: https://192.0.2.2
 -   `--photon-project`: Your project Id already defined in the Photon Controller.
@@ -40,7 +41,7 @@ Environment variables and default values:
 | `--photon-ssh-user-password`             | `PHOTON_SSH_USER_PASSWORD` | -                |
 | `--photon-ssh-user`                      | `PHOTON_SSH_USER`          | `docker`         |
 
-## Configuring setup data in Photon Controller
+### Configuring setup data in Photon Controller
 
 Before using the photoncontroller driver, ensure that you've configured the following setup data in Photon Controller.
 Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-controller-cli) to connect to and configure data in Photon Controller:
