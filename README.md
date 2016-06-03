@@ -121,9 +121,9 @@ Sample Environment Variables:
 
 Following is the sample of environment variables that can be formed based on the data generated using the above sample Photon Controller CLI calls:
 
-PHOTON_ENDPOINT = https://192.0.2.2
-PHOTON_PROJECT = 71a4dd83-763e-4d7e-91fe-8b7e1f6a0719
-PHOTON_DISK_FLAVOR = DockerDiskFlavor
-PHOTON_IMAGE = 7b36947c-5387-404c-8123-2d71fd6baea7
-PHOTON_VM_FLAVOR = DockerFlavor
-PHOTON_ISO_PATH = /data/cloud-init.iso
+-   PHOTON_ENDPOINT = https://192.0.2.2
+-   PHOTON_PROJECT = 71a4dd83-763e-4d7e-91fe-8b7e1f6a0719
+-   PHOTON_DISK_FLAVOR = DockerDiskFlavor
+-   PHOTON_IMAGE = 7b36947c-5387-404c-8123-2d71fd6baea7
+-   PHOTON_VM_FLAVOR = DockerFlavor
+-   PHOTON_ISO_PATH = /data/cloud-init.iso
