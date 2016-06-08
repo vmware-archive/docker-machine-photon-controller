@@ -91,7 +91,7 @@ Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-co
 7.  You have option to either provide the user password for SSH connection or to generate an ISO to attach with VM on start up to configure SSH keys for connection.
 
     Following is the process for generating ISO using the same sample Debian image as mentioned above:
-    i.  Create a user-data.txt file which lists the SSH connection information to generate ISO from it.
+    -   Create a user-data.txt file which lists the SSH connection information to generate ISO from it.
 
         Sample: user-data.txt
 
@@ -113,7 +113,7 @@ Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-co
             sudo: ALL=(ALL) NOPASSWD:ALL
             shell: /bin/bash
 
-    ii. Use mkisofs tool to generate ISO. It will take user-data.txt as inpiut and generate ISO file for you to be used for SSH connections:
+    -   Use mkisofs tool to generate ISO. It will take user-data.txt as inpiut and generate ISO file for you to be used for SSH connections:
 
         $ mkisofs -rock -o cloud-init.iso user-data.txt
 
