@@ -1,8 +1,8 @@
 default: build
 
 version := "v1.0"
-version_description := "Docker Machine Driver Plugin for the Controller"
-human_name := "Photon Controller Driver"
+version_description := "Docker Machine Driver Plugin for Photon Controller"
+human_name := "Docker Machine Driver Plugin for Photon Controller”
 
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
