@@ -145,6 +145,11 @@ func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 			EnvVar: "PHOTON_SSH_USER_PASSWORD",
 		},
 		mcnflag.StringFlag{
+			Name:   "photon-ssh-keypath",
+			Usage:  "SSH key path",
+			EnvVar: "PHOTON_SSH_KEYPATH",
+		},
+		mcnflag.StringFlag{
 			Name:   "photon-ssh-user",
 			Usage:  "SSH user",
 			Value:  defaultSSHUser,
@@ -193,6 +198,10 @@ func (d *Driver) GetSSHHostname() (string, error) {
 	return d.GetIP()
 }
 
+func (d *Driver) GetSSHKeyPath() string {
+	return d.SSHKeyPath
+}
+
 func (d *Driver) GetPublicSSHKeyPath() string {
 	return d.GetSSHKeyPath() + ".pub"
 }
@@ -213,6 +222,7 @@ func (d *Driver) SetConfigFromFlags(flags drivers.DriverOptions) error {
 	d.DiskName = flags.String("photon-diskname")
 	d.BootDiskSize = flags.Int("photon-bootdisksize")
 	d.ISOPath = flags.String("photon-iso-path")
+	d.SSHKeyPath = flags.String("photon-ssh-keypath")
 	d.SSHUserPassword = flags.String("photon-ssh-user-password")
 	d.PhotonEndpoint = flags.String("photon-endpoint")
 	d.SSHUser = flags.String("photon-ssh-user")
@@ -323,6 +333,10 @@ func (d *Driver) PreCreateCheck() error {
 
 	if d.ISOPath == "" && d.SSHUserPassword == "" {
 		return fmt.Errorf("Both SSH user password and ISO path were not provided. Provide either one of them using --photon-ssh-user-password or --photon-iso-path option.")
+	}
+
+	if d.ISOPath != "" && d.SSHKeyPath == "" {
+		return fmt.Errorf("SSH key path was not provided. Use --photon-ssh-keypath option to specify it")
 	}
 
 	return nil
