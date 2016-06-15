@@ -198,10 +198,6 @@ func (d *Driver) GetSSHHostname() (string, error) {
 	return d.GetIP()
 }
 
-func (d *Driver) GetSSHKeyPath() string {
-	return d.SSHKeyPath
-}
-
 func (d *Driver) GetPublicSSHKeyPath() string {
 	return d.GetSSHKeyPath() + ".pub"
 }
@@ -222,7 +218,11 @@ func (d *Driver) SetConfigFromFlags(flags drivers.DriverOptions) error {
 	d.DiskName = flags.String("photon-diskname")
 	d.BootDiskSize = flags.Int("photon-bootdisksize")
 	d.ISOPath = flags.String("photon-iso-path")
-	d.SSHKeyPath = flags.String("photon-ssh-keypath")
+
+	if (d.ISOPath != "") {
+		d.SSHKeyPath = flags.String("photon-ssh-keypath")
+	}
+
 	d.SSHUserPassword = flags.String("photon-ssh-user-password")
 	d.PhotonEndpoint = flags.String("photon-endpoint")
 	d.SSHUser = flags.String("photon-ssh-user")
