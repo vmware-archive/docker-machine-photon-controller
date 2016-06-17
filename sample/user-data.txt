@@ -1,0 +1,16 @@
+#cloud-config
+
+groups:
+  - docker
+
+# Configure the Dockermachine user
+users:
+  - name: docker
+    gecos: Dockermachine
+    primary-group: docker
+    lock-passwd: false
+    passwd: $1$wRWUQ6KK$IDM0GX.PR23WZmcBKhiKs.
+    ssh-authorized-keys: 
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDxhpSPrcMGIEdd/zpic82XdyPw+msrdFpI6sHggIcCLaLRFccH8Ih43piLVP3aEnPxslXtTuxCxNipttPXqqW7sc02/Bv6EUnKAQOWOz3WzeEXtOCyqXdg7dp2+iAs9ykJJVs+sOfk6k3XLW+ukJO/SJG4wPEF8O+bbUAHvTyLQDKYsIAoWvKNMPo16tzK7tGVQMy9fN4UC5r08E2SEPWQ3rsMO07NFNxpWKJHqyLFip6HKMQCJ0c1tE63LisAuqn8NGdoHxdqxRKdEl/R1U41J/ovW8TyT+RzgedE9maIPGQVUnbwqlww/ta5HoovQeh4FXjnC3K9A8AbIhuPA6aL user@sea2-office-dhcp-96-160.eng.vmware.com
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
