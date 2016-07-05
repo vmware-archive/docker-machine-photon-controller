@@ -101,7 +101,7 @@ Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-co
     Following is the process for generating ISO using the same sample Debian image as mentioned above:
     -   Create a user-data.txt file which lists SSH connection information to generate ISO from it. 
 
-	Sample:[user-data.txt](https://github.com/vmware/docker-machine-photon-controller/blob/master/sample/user-data.txt)
+	 Sample: [user-data.txt](https://github.com/vmware/docker-machine-photon-controller/blob/master/sample/user-data.txt)
 
     -   Use mkisofs tool to generate ISO. It will take user-data.txt as input and generate ISO file for you to be used for SSH connections:
 
