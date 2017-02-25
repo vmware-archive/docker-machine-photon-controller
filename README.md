@@ -90,7 +90,7 @@ Sample data here uses Photon Controller CLI (https://github.com/vmware/photon-co
 6.  Upload an image in Photon Controller.
 
     Following command uploads a Debian in Photon Controller that can be used to create VMs in future.
-    You can download the sample Debian image from: https://bintray.com/artifact/download/photon-controller/public/OS/debian/debian-8.2.vmdk
+    You can download the sample Debian image from: https://s3.amazonaws.com/photon-platform/artifacts/OS/debian/debian-8.2.vmdk
 
     $ photon --non-interactive image create '/data/debian-8.2.vmdk' -n 'image-debian' -i 'EAGER'
 
