@@ -277,7 +277,7 @@ func (d *Driver) Create() error {
 					BootDisk:   true,
 				},
 			},
-			Networks:	[]string{
+			Subnets:	[]string{
 				d.Network,
 			},
 		}
