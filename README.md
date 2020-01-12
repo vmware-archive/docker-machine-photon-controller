@@ -6,6 +6,7 @@ keywords = ["machine, Photon Controller, driver"]
 +++
 <![end-metadata]-->
 
+# VMware has ended active development of this project, this repository will no longer be updated.
 # Photon Controller Driver Plugin
 
 Photon Controller driver plugin is developed to create machines on [Photon Controller](http://vmware.github.io/photon-controller/). In order to create a docker machine you must supply parameters 
